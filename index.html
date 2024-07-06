@@ -4,25 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src="./script.js" defer></script>
+  <script src="./script.js" defer type="module"></script>
   <title>Morse Code Translator</title>
 </head>
 <body>
-  <h1>English to Morse Code Translator</h1>
-  <div class="box-container">
-    <form id="formInput" class="text-box">
-      <textarea name="textInput" id="textInput" type="text" placeholder="Enter text here"></textarea>
-      <div class="button-submit">
-        <button id=btnSubmit type="submit">Translate</button>
-      </div>
-    </form>
-    <div class="arrow-container">
-      <i class="fa-solid fa-arrow-right"></i>
+  <h1>Morse code translator</h1>
+
+  <div class="wrapper">
+    <h3>English to Morse Code</h3>
+    <div class="box-container">
+      <form class="text-box">
+        <textarea name="textInput" id="engInput" type="text" placeholder="Enter Text"></textarea>
+        <div class="button-container">
+          <button id=btnEng type="submit">Translate</button>
+        </div>
+      </form>
+      <form class="text-box">
+        <textarea id="morseResult" disabled="disabled"></textarea>
+        <div class="button-container">
+          <button id="morseCopy" class="btn-copy">Copy</button>
+        </div>
+      </form>
     </div>
-    <form class="text-box">
-      <textarea name="textResult" id="textResult"></textarea>
-    </form>
+  </div>
+
+  <div class="wrapper">
+    <h3>Morse Code to English</h3>
+    <div class="box-container">
+      <form class="text-box">
+        <textarea name="morseInput" id="morseInput" type="text" placeholder="Enter Morse Code"></textarea>
+        <div class="button-container">
+          <button id=btnMorse type="submit">Translate</button>
+        </div>
+      </form>
+      <form class="text-box">
+        <textarea id="engResult" disabled="disabled"></textarea>
+        <div class="button-container">
+          <button id="engCopy" class="btn-copy">Copy</button>
+        </div>
+      </form>
+    </div>
   </div>
 </body>
 </html>
